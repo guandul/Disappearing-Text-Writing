@@ -40,8 +40,6 @@ class TextWritingApp(tk.Tk):
         self.clock.pack(expand=True)
 
     def star_timer(self, event):
-        print("Start timer")
-
         self.timer = self.timer_max
         if not self.first_key:
             self.update_window()
@@ -59,7 +57,6 @@ class TextWritingApp(tk.Tk):
             self.clock.after(1000, self.update_window)
 
     def end_app(self):
-        print("Is the end")
         showinfo(
             title='Time out',
             message=f"You must keep writing"
